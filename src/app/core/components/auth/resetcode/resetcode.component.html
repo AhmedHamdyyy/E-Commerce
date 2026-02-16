@@ -1,0 +1,58 @@
+@if(resetCodeFlag){
+
+<section class="w-3/4 mx-auto">
+
+  <h1 class="text-green-600 text-lg font-meduim mb-5">{{'resetcode.resetCode' | translate}}</h1>
+
+  @if(errMsg()){
+  <div class="p-4 mb-4 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+    <span class="font-medium">{{'resetcode.dangerAlert' | translate}}</span> {{errMsg()}}
+  </div>
+  }
+
+  <form [formGroup]="resetCodeForm" (ngSubmit)="submitresetCodeForm()">
+
+    <div class="mb-3">
+      <label for="resetCode" class="block mb-1 text-sm font-medium text-heading">{{'resetcode.Code' |
+        translate}}</label>
+      <input formControlName="resetCode" type="text" id="resetCode"
+        class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+        placeholder="{{'resetcode.resetCodePlaceholder' | translate}}" required />
+      @if(resetCodeForm.get('resetCode')?.errors && resetCodeForm.get('resetCode')?.touched){
+      <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+        @if(resetCodeForm.get('resetCode')?.errors?.['required']){
+        <p>{{'resetcode.resetCodeRequired' | translate}}</p>
+        }
+        @else if(resetCodeForm.get('resetCode')?.errors?.['pattern']){
+        <p>{{'resetcode.resetCodeNotValid' | translate}}</p>
+        }
+      </div>
+      }
+    </div>
+
+
+    <div class="flex justify-between items-center">
+      <!-- <a routerLink="/forgetpassword" class="text-blue-600 underline">Submit</a> -->
+
+      <button [disabled]="resetCodeForm.invalid" class="btn-main mb-5 block ">
+        @if(isLoading()){
+        <span><i class="fa-solid fa-spinner fa-spin"></i></span>
+        }
+        @else{
+        <span>{{'resetcode.submit' | translate}}</span>
+        }
+
+      </button><!--(click)="submitresetCodeForm()" ms-auto -->
+    </div>
+
+
+  </form>
+
+</section>
+
+}
+
+@if(resetNewPasswordFlag)
+{
+<app-resetnewpassword></app-resetnewpassword>
+}

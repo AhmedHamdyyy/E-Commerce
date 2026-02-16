@@ -1,0 +1,44 @@
+<footer class="bg-gray-100 p-5">
+
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-xl">{{'footer.title' | translate}}</h1>
+        <p class="text-gray-600 mt-2 mb-5">{{'footer.description' | translate}}</p>
+
+
+        <form class="flex items-center   mx-auto space-x-2">
+            <div class="relative w-10/12">
+
+                <input type="email" id="voice-search"
+                    class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 shadow-xs placeholder:text-body"
+                    placeholder="{{'footer.emailPlaceholder' | translate}}" required />
+
+            </div>
+            <button type="submit" class="btn-main w-2/12">
+                {{'footer.shareButton' | translate}}
+            </button>
+        </form>
+
+        <div class="pay-details border-y py-5 border-gray-300  md:flex justify-between items-center my-5">
+            <div class="flex items-center gap-2">
+                <h3 class="text-sm m-0">{{'footer.paymentPartners' | translate}}</h3>
+                <img src="images/amazon-pay.png" width="50px" alt="" />
+                <img src="images/American-Express-Color.png" width="50px" alt="" />
+                <img src="images/paypal.png" width="50px" alt="" />
+                <img src="images/mastercard.webp" width="50px" alt="" />
+            </div>
+
+            <div class="flex items-center gap-2">
+                <h3 class="h6 m-0">{{'footer.delivery' | translate}}</h3>
+                <img src="/images/get-google-play.png" width="100px" alt="" />
+                <img src="/images/get-apple-store.png" width="100px" alt="" />
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+</footer>

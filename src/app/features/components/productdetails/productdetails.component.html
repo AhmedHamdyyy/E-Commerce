@@ -1,0 +1,17 @@
+<section
+    class="mt-12 justify-between mb-5 flex flex-col items-center bg-neutral-primary-soft   shadow-xs md:flex-row  md:flex-row ">
+    <img class="object-cover  md:w-1/4 rounded-base  mb-4 md:mb-0" [src]="data().imageCover" alt="data().title">
+    <div class="flex md:w-3/4 flex-col justify-between md:p-4 leading-normal">
+        <!-- <p class="self-start text-sm text-gray-600">{{data() | json}}</p> تفاصيل الداتا -->
+        <p class="self-end text-sm text-gray-600">{{date | date : 'MM/dd/yyyy hh:mm a'}}</p>
+        <h1 class="mb-2 text-xl font-bold tracking-tight text-heading">{{data().title | onsale}}</h1>
+        <p class="mb-6 text-body">{{data().description}}</p>
+        <span class="mb-3 text-sm text-green-600">{{data().category.name | titlecase}}</span>
+        <div class="flex justify-between items-center mb-3">
+            <span>{{data().price | currency: 'EGP'}}</span>
+            <span><i class="fa-solid fa-star text-yellow-300"></i>{{data().ratingsAverage}}</span>
+        </div>
+        <button class="rounded text-white bg-green-600 w-full py-1 cursor-pointer"
+            (click)="addProductToCart(data().id)">{{'productdetails.addToCart' | translate}}</button>
+    </div>
+</section>

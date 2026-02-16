@@ -1,0 +1,46 @@
+@if(productdata()){
+<div
+    class="relative cursor-pointer bg-neutral-primary-soft group overflow-hidden block p-3 pb-0 border border-default rounded-base shadow-xs">
+
+    @if(isLogin){
+    <button (click)="toggleWishlist(productdata()._id); $event.stopPropagation()"
+        class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow hover:scale-110 transition duration-300">
+        <i class="fa-heart text-lg transition-all duration-300 hover:scale-125 active:scale-90" [ngClass]="
+            isInWishlist()
+                ? 'fa-solid text-red-500 scale-110'
+                : 'fa-regular text-gray-400'
+        "></i>
+    </button>
+    }
+
+
+    <div [routerLink]="['/productdetails',productdata()._id]">
+        <img class="rounded-base" [src]="productdata().imageCover" alt="productdata().title" />
+
+        <div class="mt-6 mb-2">
+            <span class="text-xs text-green-600">{{productdata().category.name}}</span>
+            <h2 class="text-base font-semibold tracking-tight text-heading">{{productdata().title.split('
+                ').slice(0,2).join(' ')}}</h2>
+        </div>
+
+        <div class="flex justify-between items-center">
+            <span class="text-xs text-green-600">{{productdata().price}}EGP</span>
+            <span class="text-xs text-green-600">
+                {{productdata().ratingsAverage}}
+                <i class="fa-solid fa-star text-yellow-400"></i>
+            </span>
+        </div>
+    </div>
+    <!-- <button (click)="toggleWishlist(productdata()._id); $event.stopPropagation()"
+        class="bg-green-600 group-hover:translate-y-0 duration-1000 translate-y-full rounded text-white w-full py-1">
+        <i class="fa-heart text-lg transition-all duration-300 hover:scale-125 active:scale-90"></i>
+        wishlist</button> -->
+    <button (click)="addProductToCart(productdata()._id)"
+        class="bg-green-600 group-hover:translate-y-0 duration-1000 translate-y-full rounded text-white w-full py-1">{{'productdetails.addProductToCart'
+        | translate}}</button>
+
+</div>
+}
+@else{
+<span>No Data</span>
+}

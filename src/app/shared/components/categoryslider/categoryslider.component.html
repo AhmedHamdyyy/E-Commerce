@@ -1,0 +1,15 @@
+<section class="my-5">
+
+  <h1 class="text-green-600 font-medium text-lg mb-3">{{'categoryslider.showPopularCategories' | translate}} :</h1>
+  <owl-carousel-o [options]="customOptions">
+
+    @for (slide of categoryList(); track slide._id) {
+    <ng-template carouselSlide [id]="slide._id">
+      <img [src]="slide.image" [alt]="slide.name" [title]="slide.name" class="h-[150px] object-contain">
+      <h2 class="text-xs font-medium">{{slide.name}}</h2>
+    </ng-template>
+    }
+
+  </owl-carousel-o>
+
+</section>

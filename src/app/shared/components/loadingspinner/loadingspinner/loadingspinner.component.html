@@ -1,0 +1,14 @@
+<div class="spinner-overlay" *ngIf="show">
+    <div class="spinner-container">
+
+        <!-- spinner-pulse spinner-circular-->
+        <div class="spinner-dots" [style.width.px]="size" [style.height.px]="size">
+            <div class="dot" [style.border-color]="color"></div>
+            <div class="dot" [style.border-color]="color"></div>
+            <div class="dot" [style.border-color]="color"></div>
+        </div>
+
+        <!-- رسالة اختيارية -->
+        <p class="loading-text" *ngIf="message">{{ message }}</p>
+    </div>
+</div>

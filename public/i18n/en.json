@@ -1,0 +1,128 @@
+{
+    "navbar": {
+        "home": "Home",
+        "products": "Products",
+        "categories": "Categories",
+        "brands": "Brands",
+        "cart": "Cart",
+        "wishlist": "Wishlist",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "english": "English",
+        "arabic": "العربية",
+        "language": "Language"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "terms": "Terms",
+        "policy": "Policy",
+        "title": "Get The FreshCart App",
+        "description": "We will send you a link. Open it on your phone to download the app.",
+        "emailPlaceholder": "Email Address...",
+        "shareButton": "Send App Link",
+        "paymentPartners": "Payment Partners",
+        "delivery": "Get Delivery with FreshCart"
+    },
+    "home": {
+        "searchByPrice": "Search by Price",
+        "searchByPricePlaceholder": "Enter Price",
+        "searchByProductNamePlaceholder": "Enter Product Name",
+        "searchByPriceButton": "Search"
+    },
+    "productdetails": {
+        "addToCart": "+ Add To Cart",
+        "addProductToCart": "Add To Cart"
+    },
+    "shippingaddress": {
+        "shippingAddress": "Shipping Address",
+        "details": "Details",
+        "phone": "Phone",
+        "city": "City",
+        "cash": "Cash",
+        "online": "Visa"
+    },
+    "categoryslider": {
+        "showPopularCategories": "Show Popular Categories"
+    },
+    "cart": {
+        "shoppingCart": "Shopping Cart",
+        "totalCartPrice": "Total Cart Price",
+        "remove": "Remove",
+        "clearAll": "Clear All",
+        "checkOut": "CheckOut(Order)"
+    },
+    "login": {
+        "email": "Email",
+        "emailPlaceholder": "Email Address",
+        "password": "Password",
+        "passwordPlaceholder": "Password",
+        "emailRequired": "Email is required",
+        "emailNotValid": "Email is not valid",
+        "passwordRequired": "Password is required",
+        "passwordNotValid": "Password is not valid",
+        "forgetPassword": "Forget Password",
+        "login": "Login"
+    },
+    "register": {
+        "name": "Name",
+        "namePlaceholder": "Name",
+        "email": "Email",
+        "emailPlaceholder": "Email Address",
+        "password": "Password",
+        "passwordPlaceholder": "Password",
+        "rePassword": "Re-Password",
+        "rePasswordPlaceholder": "Re-Password",
+        "phone": "Phone",
+        "phonePlaceholder": "Phone",
+        "nameRequired": "Name is required",
+        "nameNotValid": "Name is not valid",
+        "emailRequired": "Email is required",
+        "emailNotValid": "Email is not valid",
+        "passwordRequired": "Password is required",
+        "passwordNotValid": "Password is not valid",
+        "rePasswordRequired": "Re-Password is required",
+        "rePasswordNotValid": "Re-Password is not valid",
+        "phoneRequired": "Phone is required",
+        "phoneNotValid": "Phone is not valid",
+        "forgetPassword": "Forget Password",
+        "login": "Login"
+    },
+    "resetcode": {
+        "resetCode": "Reset Code",
+        "resetCodePlaceholder": "Enter Verification Code",
+        "resetCodeRequired": "Reset Code is required",
+        "resetCodeNotValid": "Reset Code is not valid",
+        "dangerAlert": "Warning!",
+        "Code": "Code",
+        "submit": "Submit"
+    },
+    "resetnewpassword": {
+        "resetNewPassword": "Reset New Password",
+        "resetNewPasswordPlaceholder": "Enter Verification Code",
+        "resetNewPasswordRequired": "Reset Code is required",
+        "resetNewPasswordNotValid": "Reset Code is not valid",
+        "dangerAlert": "Warning!",
+        "submit": "Submit"
+    },
+    "forgetpassword": {
+        "forgetPassword": "Forget Password",
+        "email": "Email",
+        "emailPlaceholder": "Email Address",
+        "emailRequired": "Email is required",
+        "emailNotValid": "Email is not valid",
+        "dangerAlert": "Warning!",
+        "submit": "Submit"
+    },
+    "wishlist": {
+        "wishlist": "Wishlist",
+        "addToWishlist": "Add to Wishlist",
+        "removeFromWishlist": "Remove from Wishlist",
+        "items": "Items",
+        "empty": "Wishlist is empty",
+        "saveItems": "Save items you love to buy them later",
+        "continueShopping": "Continue Shopping",
+        "addToCart": "Add to Cart"
+    }
+}

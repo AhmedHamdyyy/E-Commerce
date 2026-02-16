@@ -1,0 +1,48 @@
+<section class="w-3/4 mx-auto mt-12 mb-6 p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
+    <div class="flex items-center justify-between mb-4">
+        <div>
+            <h1 class="text-xl font-semibold text-heading">{{'cart.shoppingCart' | translate}}</h1>
+            <p class="text-base font-medium my-1 text-green-600">{{'cart.totalCartPrice' | translate}}:
+                {{cartData().totalCartPrice}} EGP</p>
+        </div>
+
+        <button (click)="ClearCart()"
+            class="font-medium bg-red-600 text-white rounded px-3 py-1 cursor-pointer">{{'cart.clearAll' |
+            translate}}</button>
+    </div>
+    <div class="flow-root">
+        <ul role="list" class="divide-y divide-default">
+            @for (item of cartData().products; track item.product._id) {
+            <li class="py-4 sm:py-4">
+                <div class="flex items-center gap-2">
+                    <div class="shrink-0">
+                        <img class="w-30 h-30 object-contain" [src]="item.product.imageCover" alt="imageCover">
+                    </div>
+                    <div class="flex-1 min-w-0 ms-2">
+                        <h2 class="font-medium text-heading truncate">
+                            {{item.product.title}}
+                        </h2>
+                        <p class="text-sm my-1 truncate text-green-600">
+                            {{'cart.price' | translate}} : {{item.price}} EGP
+                        </p>
+                        <button (click)="RemoveSpecificProductFromCart(item.product._id)" class="cursor-pointer"><i
+                                class="fas fa-trash text-red-600"></i>{{'cart.remove' | translate}}</button>
+                    </div>
+                    <div class="inline-flex items-center font-medium text-heading">
+                        <button (click)="UpdateProductCartCount(item.product._id, item.count = item.count + 1)"
+                            class="cursor-pointer bg-green-600 text-white px-2 py-1 rounded"><i
+                                class="fas fa-plus"></i></button>
+                        <span class="px-2">{{item.count}}</span>
+                        <button (click)="UpdateProductCartCount(item.product._id, item.count = item.count - 1)"
+                            class="cursor-pointer bg-red-600 text-white px-2 py-1 rounded"><i
+                                class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>
+
+        <button [routerLink]="['/shippingaddress' , cartData()._id]" class="btn-main block ms-auto">{{'cart.checkOut' |
+            translate}}</button>
+    </div>
+</section>

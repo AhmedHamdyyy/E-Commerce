@@ -1,0 +1,117 @@
+<section class="w-3/4 mx-auto">
+
+    <h1 class="text-green-600 text-xl font-meduim my-5">{{'register.registerNow' | translate}}</h1>
+
+    @if(errMsg()){
+    <div class="p-4 mb-4 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+        <span class="font-medium">{{'register.dangerAlert' | translate}}</span> {{errMsg()}}
+    </div>
+    }
+
+    <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+
+        <div class="mb-3">
+            <label for="name" class="block mb-1 text-sm font-medium text-heading">{{'register.name' |
+                translate}}</label>
+            <input formControlName="name" type="text" id="name"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                placeholder="Name" required />
+            @if(registerForm.get('name')?.errors && registerForm.get('name')?.touched){
+            <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+                @if(registerForm.get('name')?.errors?.['required']){
+                <p>{{'register.nameRequired' | translate}}</p>
+                }
+                @else if(registerForm.get('name')?.errors?.['minlength']){
+                <p>{{'register.nameMinLength' | translate}}</p>
+                }
+                @else if(registerForm.get('name')?.errors?.['maxlength']){
+                <p>{{'register.nameMaxLength' | translate}}</p>
+                }
+            </div>
+            }
+
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="block mb-1 text-sm font-medium text-heading">Email</label>
+            <input formControlName="email" type="email" id="email"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                placeholder="Email" required />
+            @if(registerForm.get('email')?.errors && registerForm.get('email')?.touched){
+            <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+                @if(registerForm.get('email')?.errors?.['required']){
+                <p>{{'register.emailRequired' | translate}}</p>
+                }
+                @else if(registerForm.get('email')?.errors?.['email']){
+                <p>{{'register.emailNotValid' | translate}}</p>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="block mb-1 text-sm font-medium text-heading">Password</label>
+            <input formControlName="password" type="password" id="password"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                placeholder="Password" required />
+            @if(registerForm.get('password')?.errors && registerForm.get('password')?.touched){
+            <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+                @if(registerForm.get('password')?.errors?.['required']){
+                <p>{{'register.passwordRequired' | translate}}</p>
+                }
+                @else if(registerForm.get('password')?.errors?.['pattern']){
+                <p>{{'register.passwordNotValid' | translate}}</p>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label for="repassword" class="block mb-1 text-sm font-medium text-heading">rePassword</label>
+            <input formControlName="rePassword" type="password" id="repassword"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                placeholder="rePassword" required />
+            @if(registerForm.get('rePassword')?.errors && registerForm.get('rePassword')?.touched){
+            <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+                @if(registerForm.get('rePassword')?.errors?.['required']){
+                <p>{{'register.rePasswordRequired' | translate}}</p>
+                }
+                @else if(registerForm.get('rePassword')?.errors?.['mismatch']){
+                <p>{{'register.rePasswordNotMatch' | translate}}</p>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label for="mobile" class="block mb-1 text-sm font-medium text-heading">Mobile</label>
+            <input formControlName="phone" type="tel" id="mobile"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-green-600 focus:border-green-600 block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                placeholder="Mobile" required />
+            @if(registerForm.get('phone')?.errors && registerForm.get('phone')?.touched){
+            <div class="p-1 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
+                @if(registerForm.get('phone')?.errors?.['required']){
+                <p>{{'register.phoneRequired' | translate}}</p>
+                }
+                @else if(registerForm.get('phone')?.errors?.['pattern']){
+                <p>{{'register.phoneNotValid' | translate}}</p>
+                }
+            </div>
+            }
+        </div>
+
+        <button [disabled]="registerForm.invalid" class="btn-main mb-5 block ">
+            @if(isLoading()){
+            <span><i class="fa-solid fa-spinner fa-spin"></i></span>
+            }
+            @else{
+            <span>{{'register.register' | translate}}</span>
+            }
+
+        </button><!--(click)="submitRegisterForm()" ms-auto -->
+
+
+
+    </form>
+
+</section>

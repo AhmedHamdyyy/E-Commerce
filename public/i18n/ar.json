@@ -1,0 +1,128 @@
+{
+    "navbar": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "categories": "التصنيفات",
+        "brands": "الماركات",
+        "cart": "السلة",
+        "wishlist": "قائمة الرغبات",
+        "login": "تسجيل الدخول",
+        "register": "تسجيل",
+        "logout": "تسجيل الخروج",
+        "english": "English",
+        "arabic": "العربية",
+        "language": "اللغة"
+    },
+    "footer": {
+        "about": "من نحن",
+        "contact": "اتصل بنا",
+        "terms": "الشروط والاحكام",
+        "policy": "سياسة الخصوصية",
+        "title": "احصل على تطبيق فريش كارت",
+        "description": "سنرسل لك رابطًا. افتحه على هاتفك لتحميل التطبيق.",
+        "emailPlaceholder": "البريد الإلكتروني...",
+        "shareButton": "إرسال رابط التطبيق",
+        "paymentPartners": "شركاء الدفع",
+        "delivery": "احصل على التوصيل مع فريش كارت"
+    },
+    "home": {
+        "searchByPrice": "بحث بالسعر",
+        "searchByPricePlaceholder": "أدخل السعر",
+        "searchByPriceButton": "ابحث حسب السعر",
+        "searchByProductNamePlaceholder": "أدخل اسم المنتج"
+    },
+    "productdetails": {
+        "addToCart": "+ إضافة للسلة",
+        "addProductToCart": "إضافة للسلة"
+    },
+    "shippingaddress": {
+        "shippingAddress": "العنوان",
+        "details": "التفاصيل",
+        "phone": "الهاتف",
+        "city": "المدينة",
+        "cash": "الدفع عند الاستلام",
+        "online": "الدفع عبر الإنترنت"
+    },
+    "categoryslider": {
+        "showPopularCategories": "عرض التصنيفات"
+    },
+    "cart": {
+        "shoppingCart": "سلة التسوق",
+        "totalCartPrice": "السعر الإجمالي للسلة",
+        "remove": "إزالة",
+        "clearAll": "مسح الكل",
+        "checkOut": "الدفع(الطلب)"
+    },
+    "login": {
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "passwordPlaceholder": "كلمة المرور",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailNotValid": "البريد الإلكتروني غير صحيح",
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "passwordNotValid": "كلمة المرور غير صحيحة",
+        "forgetPassword": "نسيت كلمة المرور",
+        "login": "تسجيل الدخول"
+    },
+    "register": {
+        "name": "الاسم",
+        "namePlaceholder": "الاسم",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "passwordPlaceholder": "كلمة المرور",
+        "rePassword": "إعادة كلمة المرور",
+        "rePasswordPlaceholder": "إعادة كلمة المرور",
+        "phone": "الهاتف",
+        "phonePlaceholder": "الهاتف",
+        "nameRequired": "الاسم مطلوب",
+        "nameNotValid": "الاسم غير صحيح",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailNotValid": "البريد الإلكتروني غير صحيح",
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "passwordNotValid": "كلمة المرور غير صحيحة",
+        "rePasswordRequired": "إعادة كلمة المرور مطلوبة",
+        "rePasswordNotValid": "إعادة كلمة المرور غير صحيحة",
+        "phoneRequired": "الهاتف مطلوب",
+        "phoneNotValid": "الهاتف غير صحيح",
+        "forgetPassword": "نسيت كلمة المرور",
+        "login": "تسجيل الدخول"
+    },
+    "resetcode": {
+        "resetCode": "إعادة تعيين كلمة المرور",
+        "resetCodePlaceholder": "أدخل رمز التحقق",
+        "resetCodeRequired": "رمز التحقق مطلوب",
+        "resetCodeNotValid": "رمز التحقق غير صحيح",
+        "dangerAlert": "تحذير!",
+        "Code": "رمز التحقق",
+        "submit": "إرسال"
+    },
+    "resetnewpassword": {
+        "resetNewPassword": "إعادة تعيين كلمة المرور",
+        "resetNewPasswordPlaceholder": "أدخل رمز التحقق",
+        "resetNewPasswordRequired": "رمز التحقق مطلوب",
+        "resetNewPasswordNotValid": "رمز التحقق غير صحيح",
+        "dangerAlert": "تحذير!",
+        "submit": "إرسال"
+    },
+    "forgetpassword": {
+        "forgetPassword": "نسيت كلمة المرور",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "البريد الإلكتروني",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailNotValid": "البريد الإلكتروني غير صحيح",
+        "dangerAlert": "تحذير!",
+        "submit": "إرسال"
+    },
+    "wishlist": {
+        "wishlist": "قائمة المفضله",
+        "addToWishlist": "إضافة لقائمة المفضله",
+        "removeFromWishlist": "إزالة من قائمة المفضله",
+        "items": "عدد العناصر",
+        "empty": "قائمة المفضله فارغه",
+        "saveItems": "حفظ العناصر التي تحب",
+        "continueShopping": "مواصلة التسوق",
+        "addToCart": "إضافة للسلة"
+    }
+}

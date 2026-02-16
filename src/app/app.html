@@ -1,0 +1,12 @@
+<div class="flex min-h-screen flex-col justify-between">
+    <app-navbar></app-navbar>
+    <div class="w-11/12 mx-auto"><!--  pt-12 -->
+        <!-- افضل spinner اللي تعملها css بنفسك (Preformance) -->
+        <!-- الـ Spinner -->
+        <app-loadingspinner [show]="spinnerService.loading()" [message]="spinnerService.message()" [size]="70"
+            color="#007bff">
+        </app-loadingspinner><!-- -->
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</div>
