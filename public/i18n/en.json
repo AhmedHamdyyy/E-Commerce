@@ -51,7 +51,8 @@
         "totalCartPrice": "Total Cart Price",
         "remove": "Remove",
         "clearAll": "Clear All",
-        "checkOut": "CheckOut(Order)"
+        "checkOut": "CheckOut(Order)",
+        "price": "Price"
     },
     "login": {
         "email": "Email",
